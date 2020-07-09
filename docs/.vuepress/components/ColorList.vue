@@ -19,6 +19,7 @@ export default {
         },
         groupedColors: function () {
             return _.groupBy(this.colorKeys, function (key) {
+                console.log(key)
                 return key.split('-')[0]
             })
         },

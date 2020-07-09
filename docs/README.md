@@ -2,19 +2,19 @@
 
 ## Colours
 
-<color-list :colors="tailwindConfig.colors" />
+<color-list :colors="tailwindConfig.theme.colors" />
 
 ## Typography
 
-<typography-list :fonts="tailwindConfig.fonts" :sizes="tailwindConfig.textSizes" :weights="tailwindConfig.fontWeights" />
+<typography-list :fonts="tailwindConfig.theme.fonts" :sizes="tailwindConfig.theme.textSizes" :weights="tailwindConfig.theme.fontWeights" />
 
 ## Padding
 
-<padding-list :padding="tailwindConfig.padding" />
+<padding-list :padding="tailwindConfig.theme.padding" />
 
 ## Opacity
 
-<opacity-list :opacities="tailwindConfig.opacity" />
+<opacity-list :opacities="tailwindConfig.theme.opacity" />
 
 <script>
 import _ from 'lodash'

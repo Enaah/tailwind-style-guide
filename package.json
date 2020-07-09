@@ -10,13 +10,13 @@
     "author": "",
     "license": "MIT",
     "devDependencies": {
-        "autoprefixer": "^9.3.1",
+        "autoprefixer": "^9.8.4",
         "postcss-import": "^12.0.1",
-        "tailwindcss": "^0.7.0"
+        "tailwindcss": "^1.4.6"
     },
     "dependencies": {
         "dotenv": "^8.2.0",
-        "lodash": "^4.17.11",
+        "lodash": "^4.17.19",
         "webpack": "^4.43.0"
     },
     "prettier": {

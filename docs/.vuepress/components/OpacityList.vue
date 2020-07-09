@@ -1,10 +1,13 @@
 <template>
     <div class="flex mt-4">
-        <div v-for="key in opacityKeysRevered" class="flex-1 relative bg-transparent h-16">
+        <div
+            v-for="key in opacityKeysRevered"
+            class="flex-1 relative bg-transparent h-16"
+        >
             <div
                 :class="'opacity-' + key"
                 :title="'.opacity-' + key"
-                class="relative w-full h-full bg-red"
+                class="relative w-full h-full bg-black"
             ></div>
         </div>
     </div>
@@ -16,10 +19,10 @@ import _ from 'lodash'
 export default {
     props: ['opacities'],
     computed: {
-        opacityKeys: function() {
+        opacityKeys: function () {
             return _.keys(this.opacities)
         },
-        opacityKeysRevered: function() {
+        opacityKeysRevered: function () {
             return _.reverse(this.opacityKeys)
         },
     },
