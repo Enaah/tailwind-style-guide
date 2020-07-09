@@ -2,6 +2,7 @@ module.exports = {
     title: 'Tailwind Design System',
     themeConfig: {
         sidebar: 'auto',
+        lastUpdated: 'Last Updated', // string | boolean
     },
     stylus: {
         'include css': true,
