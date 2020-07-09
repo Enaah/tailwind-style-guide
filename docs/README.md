@@ -1,15 +1,19 @@
 # Client Name
 
 ## Colours
+
 <color-list :colors="tailwindConfig.colors" />
 
 ## Typography
+
 <typography-list :fonts="tailwindConfig.fonts" :sizes="tailwindConfig.textSizes" :weights="tailwindConfig.fontWeights" />
 
 ## Padding
+
 <padding-list :padding="tailwindConfig.padding" />
 
 ## Opacity
+
 <opacity-list :opacities="tailwindConfig.opacity" />
 
 <script>
@@ -26,3 +30,7 @@ export default {
     }
 }
 </script>
+
+<style lang="stylus">
+    @import "docs/.vuepress/style.styl"
+</style>
