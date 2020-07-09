@@ -7,6 +7,6 @@
 
 <script>
 export default {
-    props: ['heading', 'groupName', 'help']
+    props: ['heading', 'groupName', 'help'],
 }
 </script>

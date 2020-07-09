@@ -15,14 +15,13 @@ export default {
     props: ['colors'],
     computed: {
         colorKeys: function () {
-            return _.keys(this.colors);
+            return _.keys(this.colors)
         },
         groupedColors: function () {
             return _.groupBy(this.colorKeys, function (key) {
-                return key.split('-')[0];
+                return key.split('-')[0]
             })
-        }
-    }
+        },
+    },
 }
 </script>
-

@@ -6,6 +6,6 @@
 
 <script>
 export default {
-    props: ['color']
+    props: ['color'],
 }
 </script>
