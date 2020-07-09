@@ -1,5 +1,11 @@
+require('dotenv').config()
+const webpack = require('webpack')
 module.exports = {
-    title: 'Tailwind Design System',
+    configureWebpack: (config) => {
+        return { plugins: [new webpack.EnvironmentPlugin({ ...process.env })] }
+    },
+    title: process.env.TITLE,
+    description: process.env.DESCRIPTION,
     themeConfig: {
         sidebar: 'auto',
         lastUpdated: 'Last Updated', // string | boolean

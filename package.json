@@ -15,7 +15,9 @@
         "tailwindcss": "^0.7.0"
     },
     "dependencies": {
-        "lodash": "^4.17.11"
+        "dotenv": "^8.2.0",
+        "lodash": "^4.17.11",
+        "webpack": "^4.43.0"
     },
     "prettier": {
         "trailingComma": "es5",
