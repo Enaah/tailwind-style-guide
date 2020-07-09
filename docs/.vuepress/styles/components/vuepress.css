@@ -10,3 +10,7 @@
 .content table td {
     border: 0;
 }
+
+.theme-default-content:not(.custom) > h1:first-child {
+    margin-top: 0px;
+}
