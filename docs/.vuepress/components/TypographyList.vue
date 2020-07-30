@@ -4,17 +4,24 @@
             <group-block
                 group-name="typography"
                 :heading="fontLabel"
-                :help="'(.font-'+ fontLabel +')'"
+                :help="'(.font-' + fontLabel + ')'"
             >
                 <h4 class="mt-6">Sizes</h4>
                 <table class="w-full table">
                     <tr v-for="(textSize, textLabel) in sizes">
-                        <td class="px-5 py-3 whitespace-no-wrap" style="width: 1px;">{{textLabel}}</td>
+                        <td
+                            class="px-5 py-3 whitespace-no-wrap"
+                            style="width: 1px;"
+                        >
+                            {{ textLabel }}
+                        </td>
                         <td
                             class="px-5 py-3 leading-normal ellipsis"
                             :class="'font-' + fontLabel + ' text-' + textLabel"
                         >
-                            <span class="px-5 py-3">Lorem ipsum dolar sit amet</span>
+                            <span class="px-5 py-3"
+                                >Lorem ipsum dolar sit amet</span
+                            >
                         </td>
                     </tr>
                 </table>
@@ -25,17 +32,26 @@
                         <template v-for="weight in weightKeysRevered">
                             <td class="px-5 py-3 text-center">
                                 <span
-                                    :class="'font-' + fontLabel + ' font-' + weight"
+                                    :class="
+                                        'font-' + fontLabel + ' font-' + weight
+                                    "
                                     class="text-5xl"
                                     :title="'.font-' + weight"
-                                >A</span>
+                                    >A</span
+                                >
                             </td>
                         </template>
                     </tr>
                     <tr>
                         <template v-for="weight in weightKeysRevered">
-                            <td class="px-5 py-3 whitespace-no-wrap align-top text-center">
-                                <span class="inline-block" style="writing-mode: tb-rl;">{{weight}}</span>
+                            <td
+                                class="px-5 py-3 whitespace-no-wrap align-top text-center"
+                            >
+                                <span
+                                    class="inline-block"
+                                    style="writing-mode: tb-rl;"
+                                    >{{ weight }}</span
+                                >
                             </td>
                         </template>
                     </tr>
@@ -51,10 +67,10 @@ import _ from 'lodash'
 export default {
     props: ['fonts', 'sizes', 'weights'],
     computed: {
-        weightKeys: function() {
+        weightKeys: function () {
             return _.keys(this.weights)
         },
-        weightKeysRevered: function() {
+        weightKeysRevered: function () {
             return _.reverse(this.weightKeys)
         },
     },
