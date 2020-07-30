@@ -56,6 +56,62 @@
                         </template>
                     </tr>
                 </table>
+
+                <h4 class="mt-6">Letterspacing</h4>
+                <table class="w-full table">
+                    <tr v-for="(textSize, trackingLabel) in spaces">
+                        <td
+                            class="px-5 py-3 whitespace-no-wrap"
+                            style="width: 1px;"
+                        >
+                            {{ trackingLabel }}
+                        </td>
+                        <td
+                            class="px-5 py-3 leading-normal ellipsis"
+                            :class="
+                                'font-' +
+                                fontLabel +
+                                ' tracking-' +
+                                trackingLabel
+                            "
+                        >
+                            <span class="px-5 py-3"
+                                >Lorem ipsum dolar sit amet</span
+                            >
+                        </td>
+                    </tr>
+                </table>
+
+                <h4 class="mt-6">Lineheight</h4>
+                <table class="w-full table">
+                    <tr v-for="(textSize, lineheightlabel) in lineheight">
+                        <td
+                            class="px-5 py-3 whitespace-no-wrap"
+                            style="width: 1px;"
+                        >
+                            {{ lineheightlabel }}
+                        </td>
+                        <td
+                            class="px-5 py-3 ellipsis"
+                            :class="
+                                'font-' +
+                                fontLabel +
+                                ' leading-' +
+                                lineheightlabel
+                            "
+                        >
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </td>
+                    </tr>
+                </table>
             </group-block>
         </div>
     </div>
@@ -65,7 +121,7 @@
 import _ from 'lodash'
 
 export default {
-    props: ['fonts', 'sizes', 'weights'],
+    props: ['fonts', 'sizes', 'weights', 'spaces', 'lineheight'],
     computed: {
         weightKeys: function () {
             return _.keys(this.weights)

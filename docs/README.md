@@ -6,7 +6,7 @@
 
 ## Typography
 
-<typography-list :fonts="tailwindConfig.theme.fontFamily" :sizes="tailwindConfig.theme.fontSize" :weights="tailwindConfig.theme.fontWeight" />
+<typography-list :fonts="tailwindConfig.theme.fontFamily" :sizes="tailwindConfig.theme.fontSize" :weights="tailwindConfig.theme.fontWeight" :spaces="tailwindConfig.theme.letterSpacing" :lineheight="tailwindConfig.theme.lineHeight" />
 
 ## Padding
 
