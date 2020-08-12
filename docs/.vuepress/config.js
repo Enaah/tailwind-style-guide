@@ -1,7 +1,7 @@
 require('dotenv').config()
 const webpack = require('webpack')
 module.exports = {
-    configureWebpack: (config) => {
+    configureWebpack: () => {
         return { plugins: [new webpack.EnvironmentPlugin({ ...process.env })] }
     },
     title: process.env.TITLE,
