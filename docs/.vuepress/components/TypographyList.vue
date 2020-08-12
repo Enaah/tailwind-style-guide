@@ -6,7 +6,14 @@
                 :heading="fontLabel"
                 :help="'(.font-' + fontLabel + ')'"
             >
-                <h4 class="mt-6">Sizes</h4>
+                <h4 :id="'typography-' + fontLabel + '-sizes'" class="mt-6">
+                    <a
+                        :href="'#typography-' + fontLabel + '-sizes'"
+                        aria-hidden="true"
+                        class="header-anchor"
+                        >#</a
+                    >Sizes
+                </h4>
                 <table class="w-full table">
                     <tr v-for="(textSize, textLabel) in sizes">
                         <td
@@ -26,7 +33,15 @@
                     </tr>
                 </table>
 
-                <h4 class="mt-6">Weights</h4>
+                <h4 :id="'typography-' + fontLabel + '-weights'" class="mt-6">
+                    <a
+                        :href="'#typography-' + fontLabel + '-weights'"
+                        aria-hidden="true"
+                        class="header-anchor"
+                        >#</a
+                    >
+                    Weights
+                </h4>
                 <table class="table w-full overflow-hidden">
                     <tr>
                         <template v-for="weight in weightKeysRevered">
@@ -57,7 +72,17 @@
                     </tr>
                 </table>
 
-                <h4 class="mt-6">Letterspacing</h4>
+                <h4
+                    :id="'typography-' + fontLabel + '-letterspacing'"
+                    class="mt-6"
+                >
+                    <a
+                        :href="'#typography-' + fontLabel + '-letterspacing'"
+                        aria-hidden="true"
+                        class="header-anchor"
+                        >#</a
+                    >Letterspacing
+                </h4>
                 <table class="w-full table">
                     <tr v-for="(textSize, trackingLabel) in spaces">
                         <td
@@ -82,7 +107,17 @@
                     </tr>
                 </table>
 
-                <h4 class="mt-6">Lineheight</h4>
+                <h4
+                    :id="'typography-' + fontLabel + '-lineheight'"
+                    class="mt-6"
+                >
+                    <a
+                        :href="'#typography-' + fontLabel + '-lineheight'"
+                        aria-hidden="true"
+                        class="header-anchor"
+                        >#</a
+                    >Lineheight
+                </h4>
                 <table class="w-full table">
                     <tr v-for="(textSize, lineheightlabel) in lineheight">
                         <td
@@ -106,9 +141,7 @@
                             nostrud exercitation ullamco laboris nisi ut aliquip
                             ex ea commodo consequat. Duis aute irure dolor in
                             reprehenderit in voluptate velit esse cillum dolore
-                            eu fugiat nulla pariatur. Excepteur sint occaecat
-                            cupidatat non proident, sunt in culpa qui officia
-                            deserunt mollit anim id est laborum.
+                            eu fugiat nulla pariatur.
                         </td>
                     </tr>
                 </table>
