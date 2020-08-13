@@ -19,6 +19,13 @@
                 >
             </td>
         </tr>
+        <tr>
+            <td
+                v-for="(color, index) in colorValues"
+                class="align-top text-center"
+            ><code>{{ `.bg${colorClass}-${index}` }}</code>
+            </td>
+        </tr>
     </table>
 </template>
 
