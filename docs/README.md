@@ -17,19 +17,18 @@
 <opacity-list :opacities="tailwindConfig.theme.opacity" />
 
 <script>
-    import _ from 'lodash'
-    import resolveConfig from 'tailwindcss/resolveConfig'
-    import tailwindConfig from '../tailwind'
+import _ from 'lodash'
 
-    if (typeof(window) !== 'undefined') window.global = window
+if (typeof(window) !== 'undefined') window.global = window
+const tailwindConfig = require('../tailwind')
 
-    export default {
-        computed: {
-            tailwindConfig: function () {
-                return resolveConfig(tailwindConfig);
-            }
+export default {
+    computed: {
+        tailwindConfig: function () {
+            return tailwindConfig;
         }
     }
+}
 </script>
 
 <style lang="stylus">
